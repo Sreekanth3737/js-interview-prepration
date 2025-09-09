@@ -1,0 +1,60 @@
+<!-- Event Delegation -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      table td {
+        width: 100px;
+        height: 100px;
+        background-color: #eee;
+        text-align: center;
+      }
+      .hightLightColor {
+        background-color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <table id="table">
+      <tr>
+        <th colspan="3">Event Delegation</th>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>3</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+      <tr>
+        <td>1</td>
+        <td>2</td>
+        <td>3</td>
+      </tr>
+    </table>
+    <script>
+      let selectedElement = "";
+      let table = document.getElementById("table");
+      table.addEventListener("click", onTableClick);
+      function onTableClick(event) {
+        if (event.target.tagName === "TD") {
+          highlightColor(event.target);
+        }
+      }
+      function highlightColor(node) {
+        if (selectedElement) {
+          selectedElement.classList.remove("hightLightColor");
+        }
+        node.classList.add("hightLightColor");
+        selectedElement = node;
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="controller">
+      <h1>Table creator</h1>
+      <input
+        type="range"
+        min="1"
+        max="10"
+        value="3"
+        id="rowInput"
+        oninput="onInput()"
+      />
+      <span id="rowValue"></span>
+      <input
+        type="range"
+        min="1"
+        max="10"
+        value="3"
+        id="colInput"
+        oninput="onInput()"
+      />
+      <span id="colValue"></span>
+    </div>
+    <div id="tableContainer"></div>
+    <script src="./script.js"></script>
+  </body>
+</html>

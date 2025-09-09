@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        font-family: "Courier New", Courier, monospace;
+        margin: 10px;
+      }
+      .box {
+        background-color: lightblue;
+        border-top: 2px solid blue;
+        position: relative;
+        padding: 10px;
+      }
+      .box h3 {
+        margin: 0px;
+        padding: 10px 0px;
+      }
+      .remove {
+        position: absolute;
+        top: 5px;
+        right: 10px;
+        border: none;
+        background-color: transparent;
+        color: darkred;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="delegation">
+      <div class="box">
+        <h3>Heading 1</h3>
+        <div>
+          Heading 1 description Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Odio distinctio eveniet earum perferendis, itaque,
+          maxime hic repellat alias fugiat nesciunt quaerat numquam harum nobis
+          ullam, aspernatur ea magni quae quibusdam!
+        </div>
+        <button class="remove">[x]</button>
+      </div>
+      <div class="box">
+        <h3>Heading 2</h3>
+        <div>
+          Heading 2 description Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Odio distinctio eveniet earum perferendis, itaque,
+          maxime hic repellat alias fugiat nesciunt quaerat numquam harum nobis
+          ullam, aspernatur ea magni quae quibusdam!
+        </div>
+        <button class="remove">[x]</button>
+      </div>
+      <div class="box">
+        <h3>Heading 3</h3>
+        <div>
+          Heading 3 description Lorem ipsum, dolor sit amet consectetur
+          adipisicing elit. Odio distinctio eveniet earum perferendis, itaque,
+          maxime hic repellat alias fugiat nesciunt quaerat numquam harum nobis
+          ullam, aspernatur ea magni quae quibusdam!
+        </div>
+        <button class="remove">[x]</button>
+      </div>
+    </div>
+    <script>
+      let element = document.getElementById("delegation");
+      element.addEventListener("click", remove);
+      function remove(event) {
+        if (event.target.className === "remove") {
+          console.log(event);
+          event.target.parentElement.remove();
+        }
+      }
+    </script>
+  </body>
+</html>

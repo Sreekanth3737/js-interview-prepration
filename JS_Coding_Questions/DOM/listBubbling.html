@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      .hide {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="food">
+      <ul>
+        <li>
+          metat
+          <ul>
+            <li>
+              Red meat
+              <ul>
+                <li>Beef</li>
+                <li>Lamb</li>
+                <li>Pork</li>
+              </ul>
+            </li>
+            <li>
+              Other
+              <ul>
+                <li>Fish</li>
+                <li>Prawns</li>
+                <li>Chicken</li>
+              </ul>
+            </li>
+            <li>
+              Vegitables
+              <ul>
+                <li>
+                  Favorites
+                  <ul>
+                    <li>potatoes</li>
+                    <li>sweet corn</li>
+                    <li>carrot</li>
+                  </ul>
+                </li>
+                <li>
+                  Not Favorites
+                  <ul>
+                    <li>chow chow</li>
+                    <li>erakai</li>
+                    <li>chembu</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+    <script>
+      let foodElement = document.getElementById("food");
+      foodElement.addEventListener("click", showOrHide);
+      function showOrHide(event) {
+        let liElement = event.target;
+        if (liElement.tagName === "LI") {
+          let ulElement = liElement.querySelector("ul");
+          if (ulElement) {
+            ulElement.classList.toggle("hide");
+          }
+        }
+      }
+    </script>
+  </body>
+</html>

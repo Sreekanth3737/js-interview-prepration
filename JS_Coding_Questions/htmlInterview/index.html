@@ -1,0 +1,240 @@
+<!-- Q1: How would you structure the HTML for a product listing page?
+Answer: -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+      }
+      body {
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f9f9f9;
+        color: #333;
+        line-height: 1.6;
+        min-height: 100vh;
+
+        /* NEW */
+        display: flex;
+        flex-direction: column;
+      }
+      header {
+        background-color: #a39a9a;
+        color: #fff;
+        padding: 1rem 2rem;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+      }
+      header .logo {
+        font-size: 1.5rem;
+        font-weight: bold;
+      }
+      nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .nav-menu {
+        list-style: none;
+        display: flex;
+        gap: 1.5rem;
+      }
+      .nav-menu a {
+        text-decoration: none;
+        color: #fff;
+        font-weight: 500;
+        transition: color 0.2s ease;
+      }
+      .nav-menu a:hover {
+        color: #ff9900;
+      }
+      main {
+        display: grid;
+        grid-template-columns: 250px 1fr;
+        gap: 2rem;
+        padding: 2rem;
+      }
+      .filters {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 8px;
+        box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      }
+      .product-grid h1 {
+        margin-bottom: 1rem;
+      }
+
+      .products-container {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+        gap: 1.5rem;
+      }
+
+      /* Product card */
+      .product-card {
+        background: #fff;
+        padding: 1rem;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+        text-align: center;
+        transition: transform 0.2s ease, box-shadow 0.2s ease;
+      }
+
+      .product-card:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+      }
+
+      .product-card img {
+        max-width: 100%;
+        border-radius: 8px;
+        margin-bottom: 0.75rem;
+      }
+
+      .product-card h3 {
+        font-size: 1rem;
+        margin-bottom: 0.5rem;
+      }
+
+      .product-card .price {
+        font-weight: bold;
+        color: #2c7a7b;
+        margin-bottom: 0.75rem;
+      }
+
+      /* Button */
+      .add-to-cart {
+        background: #ff9900;
+        border: none;
+        padding: 0.6rem 1.2rem;
+        border-radius: 6px;
+        font-size: 0.9rem;
+        font-weight: 600;
+        cursor: pointer;
+        transition: background 0.2s ease;
+      }
+
+      .add-to-cart:hover {
+        background: #e68a00;
+      }
+
+      /* Footer */
+      footer {
+        background: #222;
+        color: #fff;
+        text-align: center;
+        padding: 1.5rem;
+        margin-top: 2rem;
+        font-size: 0.9rem;
+        margin-top: 0;
+      }
+
+      .footer-content {
+        max-width: 900px;
+        margin: auto;
+      }
+
+      /* Responsive adjustments */
+      @media (max-width: 768px) {
+        main {
+          grid-template-columns: 1fr;
+        }
+
+        .filters {
+          margin-bottom: 1.5rem;
+        }
+
+        nav {
+          flex-direction: column;
+          gap: 0.75rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav aria-label="Main Navigation">
+        <div class="logo">Wesco</div>
+        <ul class="nav-menu">
+          <li><a href="/">Home</a></li>
+          <li><a href="/">Categories</a></li>
+          <li><a href="/">Product</a></li>
+          <li>
+            <a href="/">Cart (<span id="cart-count">0</span>)</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <section class="filters">
+        <input type="text" />
+        <select name="" id="">
+          <option value="">select category</option>
+          <option value="">macbook</option>
+          <option value="">House</option>
+          <option value="">TV</option>
+        </select>
+      </section>
+      <section class="product-grid" aria-label="Product results">
+        <h1>Products</h1>
+        <div class="products-container" role="list">
+          <article class="product-card" role="listitem">
+            <img src="product.jpg" alt="Product name" loading="lazy" />
+            <h3>Product Name</h3>
+            <p class="price" aria-label="Price">$99.99</p>
+            <button
+              type="button"
+              class="add-to-cart"
+              data-product-id="123"
+              aria-describedby="cart-feedback"
+            >
+              Add to Cart
+            </button>
+          </article>
+          <article class="product-card" role="listitem">
+            <img src="product.jpg" alt="Product name" loading="lazy" />
+            <h3>Product Name</h3>
+            <p class="price" aria-label="Price">$99.99</p>
+            <button
+              type="button"
+              class="add-to-cart"
+              data-product-id="123"
+              aria-describedby="cart-feedback"
+            >
+              Add to Cart
+            </button>
+          </article>
+          <article class="product-card" role="listitem">
+            <img src="product.jpg" alt="Product name" loading="lazy" />
+            <h3>Product Name</h3>
+            <p class="price" aria-label="Price">$99.99</p>
+            <button
+              type="button"
+              class="add-to-cart"
+              data-product-id="123"
+              aria-describedby="cart-feedback"
+            >
+              Add to Cart
+            </button>
+          </article>
+        </div>
+      </section>
+    </main>
+    <footer>
+      <div class="footer-content">
+        <ul>
+          <li>about</li>
+          <li>products</li>
+          <li>categories</li>
+        </ul>
+      </div>
+    </footer>
+  </body>
+</html>

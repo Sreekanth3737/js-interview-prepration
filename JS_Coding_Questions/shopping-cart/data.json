@@ -1,0 +1,98 @@
+[
+  {
+    "id": 1,
+    "name": "Wireless Headphones",
+    "price": 2499,
+    "category": "Electronics",
+    "rating": 4.5,
+    "image": "https://www.lapcare.com/cdn/shop/files/1_6122ca29-5373-4c4f-97c2-0728ea368fc1.webp?v=1756209940&width=800"
+  },
+  {
+    "id": 2,
+    "name": "Men's Casual T-Shirt",
+    "price": 799,
+    "category": "Fashion",
+    "rating": 4.2,
+    "image": "https://m.media-amazon.com/images/I/A1JcJTxxnGL._UY1100_.jpg"
+  },
+  {
+    "id": 3,
+    "name": "Wooden Coffee Table",
+    "price": 5499,
+    "category": "Home",
+    "rating": 4.7,
+    "image": "https://www.royaloakindia.com/media/catalog/product/3/_/3_67.jpg"
+  },
+  {
+    "id": 4,
+    "name": "Science Fiction Novel",
+    "price": 499,
+    "category": "Books",
+    "rating": 4.3,
+    "image": "https://hips.hearstapps.com/hmg-prod/images/best-sci-fi-books-66cce565bba10.jpg?crop=0.502xw:1.00xh;0.253xw,0&resize=1200:*"
+  },
+  {
+    "id": 5,
+    "name": "Sports Watch",
+    "price": 3299,
+    "category": "Electronics",
+    "rating": 4.6,
+    "image": "https://m.media-amazon.com/images/I/61fyBGuO18L._UY1000_.jpg"
+  },
+  {
+    "id": 6,
+    "name": "Kids Toy Car",
+    "price": 1199,
+    "category": "Toys",
+    "rating": 4.1,
+    "image": "https://m.media-amazon.com/images/I/71TURAWKzhL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 7,
+    "name": "Bluetooth Speaker",
+    "price": 1999,
+    "category": "Electronics",
+    "rating": 4.4,
+    "image": "https://m.media-amazon.com/images/I/71L9o0-0SML._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 8,
+    "name": "Women's Handbag",
+    "price": 2599,
+    "category": "Fashion",
+    "rating": 4.3,
+    "image": "https://images.meesho.com/images/products/442519293/eji0h_512.webp?width=512"
+  },
+  {
+    "id": 9,
+    "name": "LED Desk Lamp",
+    "price": 899,
+    "category": "Home",
+    "rating": 4.0,
+    "image": "https://m.media-amazon.com/images/I/61QPRxJk3dL.jpg"
+  },
+  {
+    "id": 10,
+    "name": "Cooking Recipe Book",
+    "price": 699,
+    "category": "Books",
+    "rating": 4.5,
+    "image": "https://m.media-amazon.com/images/I/610vjIpdLRL._UF1000,1000_QL80_.jpg"
+  },
+  {
+    "id": 11,
+    "name": "Running Shoes",
+    "price": 3499,
+    "category": "Fashion",
+    "rating": 4.6,
+    "image": "https://images.puma.com/image/upload/f_auto,q_auto,b_rgb:fafafa,w_2000,h_2000/global/377758/01/sv01/fnd/IND/fmt/png/ForeverRun-NITRO%E2%84%A2-Women's-Running-Shoes"
+  },
+  {
+    "id": 12,
+    "name": "Smartphone Tripod",
+    "price": 1499,
+    "category": "Electronics",
+    "rating": 4.2,
+    "image": "https://www.wecool.in/cdn/shop/files/aft1.jpg?v=1720077943"
+  }
+]

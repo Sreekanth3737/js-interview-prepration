@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <form>
+      <input type="text" id="userInput" placeholder="Enter something" />
+      <button type="button" onclick="showInput()">Submit</button>
+    </form>
+    <div id="output"></div>
+
+    <script>
+      function showInput() {
+        const value = document.getElementById("userInput").value;
+        document.getElementById("output").innerHTML = value;
+      }
+    </script>
+  </body>
+</html>

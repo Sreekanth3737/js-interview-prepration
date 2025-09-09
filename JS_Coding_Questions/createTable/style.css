@@ -1,0 +1,18 @@
+body {
+  font-family: sans-serif;
+}
+
+.row_grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  background: white;
+  gap: 4px;
+}
+.row_grid > div {
+  text-align: center;
+  border: 1px solid;
+  background-color: #ccee;
+}
+.controls {
+  margin-bottom: 10px;
+}
