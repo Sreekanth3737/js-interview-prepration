@@ -1,0 +1,53 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 5px;
+  background: linear-gradient(135deg, rgb(109, 109, 222), purple);
+}
+
+header > p,
+h1 {
+  color: white;
+  margin: 10px;
+}
+#transformers {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  min-height: 100vh;
+  margin: 40px;
+}
+.transformer-item {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  gap: 20px;
+  border: 1px solid #181616;
+  padding: 20px;
+  background: #eee;
+}
+.transformer-item > span {
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+}
+.transformer-item > output {
+  padding: 20px;
+  background: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+#strInput {
+  border: none;
+  width: 70%;
+  border-radius: 20px;
+  padding: 10px;
+  background: white;
+  margin: 40px;
+}
