@@ -1,0 +1,88 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.end-of-posts {
+  display: none;
+}
+.loader {
+  display: none;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.post-container > div {
+  padding: 1rem;
+  border: 2px solid rgb(29, 31, 31);
+  margin: 20px;
+  background: rgba(182, 188, 188, 0.8);
+  box-shadow: 0 4px 6px rgba(255, 255, 255, 0.5);
+}
+.post-container h5 {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  margin-left: 2rem;
+}
+.post-container span {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  font-size: 0.9em;
+  color: #666;
+  margin-bottom: 0.5rem;
+  display: block;
+  background: yellow;
+  padding: 10px;
+  border-radius: 10px;
+}
+.post-container p {
+  padding: 1rem;
+  border: 1px solid rgba(28, 27, 27, 0.5);
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 300;
+  background-color: white;
+  margin-top: 0.5rem;
+  border-radius: 4px;
+  width: 100%;
+}
+
+.post-item-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.end-of-posts {
+  background: linear-gradient(135deg, blue, purple);
+  text-align: center;
+  padding: 1rem;
+}
+.end-of-posts p {
+  color: white;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 700;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid #4f46e5;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin: 20px auto;
+  display: none;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
