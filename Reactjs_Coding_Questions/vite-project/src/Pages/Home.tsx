@@ -1,0 +1,56 @@
+import React from "react";
+import { Link } from "react-router-dom";
+
+const ROUTES = [{ link: "/grid-lights", title: "Grid Lights" }];
+
+const Home = () => {
+  return (
+    <div style={{ padding: "4rem" }}>
+      <h1>React Challenges</h1>
+      <ul
+        style={{
+          display: "grid",
+          gridTemplateColumns: "repeat(4,1fr)",
+          gap: "20px",
+          flexWrap: "wrap",
+          listStyle: "none",
+          padding: 0,
+        }}
+      >
+        {ROUTES.map((route, index) => {
+          return (
+            <li key={index}>
+              <Link
+                style={{
+                  display: "flex",
+                  padding: "2rem",
+                  justifyContent: "space-between",
+                  background: "#f5f5f5",
+                  borderRadius: "12px",
+                  textDecoration: "none",
+                  color: "#333",
+                  fontFamily: "serif",
+                  fontWeight: 600,
+                  boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
+                  transition: "all 0.3s ease",
+                }}
+                onMouseEnter={(e) =>
+                  (e.currentTarget.style.transform = "scale(1.05)")
+                }
+                onMouseLeave={(e) =>
+                  (e.currentTarget.style.transform = "scale(1)")
+                }
+                to={route.link}
+              >
+                {route.title}
+                <span style={{ fontWeight: 400 }}>{route.link}</span>
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </div>
+  );
+};
+
+export default Home;
