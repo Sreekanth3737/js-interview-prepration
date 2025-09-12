@@ -50,23 +50,24 @@ const GridLights = () => {
       return () => timerIds.forEach((t) => clearTimeout(t));
     }
   }, [selectedOrder]);
-
   return (
-    <div className={classes.grid}>
-      {cells.map((isGreen, index) => {
-        return (
-          <button
-            disabled={isLocked}
-            onClick={() => handleClick(index)}
-            className={`${classes.cell} ${
-              isGreen ? classes.cellGreen : classes.cellRed
-            }`}
-            key={index}
-          >
-            {index + 1}
-          </button>
-        );
-      })}
+    <div className={classes.lightContainer}>
+      <div className={classes.grid}>
+        {cells.map((isGreen, index) => {
+          return (
+            <button
+              disabled={isLocked}
+              onClick={() => handleClick(index)}
+              className={`${classes.cell} ${
+                isGreen ? classes.cellGreen : classes.cellRed
+              }`}
+              key={index}
+            >
+              {index + 1}
+            </button>
+          );
+        })}
+      </div>
     </div>
   );
 };

@@ -1,9 +1,11 @@
 import { useParams } from "react-router-dom";
-import GridLights from "../Challenges/grid-lights/App";
 import type { ComponentType } from "react";
+import GridLights from "../Challenges/grid-lights/App";
+import Tabs from "../Challenges/tabs/App";
 
 const reactChallengesMap: Record<string, ComponentType> = {
   "grid-lights": GridLights,
+  "tabs-component": Tabs,
 };
 
 const Challenges = () => {

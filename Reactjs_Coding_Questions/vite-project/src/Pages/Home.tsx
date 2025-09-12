@@ -1,7 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const ROUTES = [{ link: "/grid-lights", title: "Grid Lights" }];
+const ROUTES = [
+  { link: "/grid-lights", title: "Grid Lights" },
+  { link: "/tabs-component", title: "Tabs Component" },
+];
 
 const Home = () => {
   return (
@@ -15,6 +18,7 @@ const Home = () => {
           flexWrap: "wrap",
           listStyle: "none",
           padding: 0,
+          justifyContent: "center",
         }}
       >
         {ROUTES.map((route, index) => {

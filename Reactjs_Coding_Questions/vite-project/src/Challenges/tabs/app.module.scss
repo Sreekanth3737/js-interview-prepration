@@ -1,0 +1,49 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.tabContainer {
+  display: flex;
+  flex-direction: column; // ✅ stack tabs and content
+  border: 1px solid rgb(232, 224, 224);
+  border-radius: 20px;
+  padding: 20px;
+  margin-top: 40px;
+}
+
+.tabs {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  background: linear-gradient(135deg, blue, purple);
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.tabItem {
+  list-style: none;
+  padding: 8px 16px;
+  border-radius: 8px;
+  color: white;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.tabItem:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.active {
+  background: linear-gradient(135deg, blue, yellow);
+  color: black;
+}
+
+.tabContent {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 12px;
+}
