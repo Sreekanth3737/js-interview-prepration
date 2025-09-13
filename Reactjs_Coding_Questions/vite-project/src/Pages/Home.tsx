@@ -5,6 +5,7 @@ const ROUTES = [
   { link: "/grid-lights", title: "Grid Lights" },
   { link: "/tabs-component", title: "Tabs Component" },
   { link: "/infinite-scroll", title: "Infinite Scroll" },
+  { link: "/nested-checkbox", title: "nested checkbox" },
 ];
 
 const Home = () => {
