@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 const ROUTES = [
   { link: "/grid-lights", title: "Grid Lights" },
   { link: "/tabs-component", title: "Tabs Component" },
+  { link: "/infinite-scroll", title: "Infinite Scroll" },
 ];
 
 const Home = () => {

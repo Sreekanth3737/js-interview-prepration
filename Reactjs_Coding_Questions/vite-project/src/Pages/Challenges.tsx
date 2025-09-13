@@ -2,10 +2,12 @@ import { useParams } from "react-router-dom";
 import type { ComponentType } from "react";
 import GridLights from "../Challenges/grid-lights/App";
 import Tabs from "../Challenges/tabs/App";
+import InfiniteScroll from "../Challenges/infinite-scroll/App";
 
 const reactChallengesMap: Record<string, ComponentType> = {
   "grid-lights": GridLights,
   "tabs-component": Tabs,
+  "infinite-scroll": InfiniteScroll,
 };
 
 const Challenges = () => {
