@@ -4,12 +4,14 @@ import GridLights from "../Challenges/grid-lights/App";
 import Tabs from "../Challenges/tabs/App";
 import InfiniteScroll from "../Challenges/infinite-scroll/App";
 import Nested from "../Challenges/nested-checkbox/App";
+import Grid from "../Challenges/Grid-colorizer/grid";
 
 const reactChallengesMap: Record<string, ComponentType> = {
   "grid-lights": GridLights,
   "tabs-component": Tabs,
   "infinite-scroll": InfiniteScroll,
   "nested-checkbox": Nested,
+  "grid-colorizer": Grid,
 };
 
 const Challenges = () => {

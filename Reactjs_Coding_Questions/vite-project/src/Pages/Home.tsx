@@ -6,6 +6,7 @@ const ROUTES = [
   { link: "/tabs-component", title: "Tabs Component" },
   { link: "/infinite-scroll", title: "Infinite Scroll" },
   { link: "/nested-checkbox", title: "nested checkbox" },
+  { link: "grid-colorizer", title: "GRID Colorizer" },
 ];
 
 const Home = () => {
