@@ -12,6 +12,7 @@
   width: 500px;
   height: 500px;
   background: #ddd;
+  gap: 1rem;
 }
 .cell {
   display: flex;
@@ -26,4 +27,5 @@
 }
 .cellRed {
   background: red;
+  cursor: pointer;
 }
