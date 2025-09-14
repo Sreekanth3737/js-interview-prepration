@@ -24,29 +24,29 @@ const GridLights = () => {
   };
 
   useEffect(() => {
+    if (selectedOrder.length !== totalCells) return;
     const timerIds: NodeJS.Timeout[] = [];
-    if (selectedOrder.length === totalCells) {
-      setIsLocked(true);
-      const startTimerId = setTimeout(() => {
-        [...selectedOrder].reverse().forEach((cellIndex, i) => {
-          const timerId = setTimeout(() => {
-            setCells((prev) => {
-              const copy = [...prev];
-              copy[cellIndex] = false;
-              return copy;
-            });
-          }, i * 500);
-          timerIds.push(timerId);
-        });
-        const resetSelectedOrder = setTimeout(() => {
-          setSelectedOrder([]);
-          setIsLocked(false);
-        }, selectedOrder.length * 500);
-        timerIds.push(resetSelectedOrder);
-      }, 500);
-      timerIds.push(startTimerId);
-      return () => timerIds.forEach((t) => clearTimeout(t));
-    }
+
+    setIsLocked(true);
+    const startTimerId = setTimeout(() => {
+      [...selectedOrder].reverse().forEach((cellIndex, i) => {
+        const timerId = setTimeout(() => {
+          setCells((prev) => {
+            const copy = [...prev];
+            copy[cellIndex] = false;
+            return copy;
+          });
+        }, i * 500);
+        timerIds.push(timerId);
+      });
+      const resetSelectedOrder = setTimeout(() => {
+        setSelectedOrder([]);
+        setIsLocked(false);
+      }, selectedOrder.length * 500);
+      timerIds.push(resetSelectedOrder);
+    }, 500);
+    timerIds.push(startTimerId);
+    return () => timerIds.forEach((t) => clearTimeout(t));
   }, [selectedOrder]);
   return (
     <div className={classes.lightContainer}>
