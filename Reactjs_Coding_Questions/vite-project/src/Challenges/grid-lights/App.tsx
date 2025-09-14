@@ -11,7 +11,6 @@ const GridLights = () => {
   const [isLocked, setIsLocked] = useState(false);
 
   const handleClick = (index: number) => {
-    console.log(index, "indeex");
     if (cells[index]) return;
     if (isLocked) return;
     const copySelectedOrder = [...selectedOrder];
@@ -20,7 +19,6 @@ const GridLights = () => {
       copyCells[index] = true;
       copySelectedOrder.push(index);
     }
-    console.log(copyCells);
     setCells(copyCells);
     setSelectedOrder(copySelectedOrder);
   };
