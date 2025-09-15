@@ -8,6 +8,7 @@ const ROUTES = [
   { link: "/nested-checkbox", title: "nested checkbox" },
   { link: "grid-colorizer", title: "GRID Colorizer" },
   { link: "checkbox-tree", title: "Checkbox Tree" },
+  { link: "long-polling", title: "Long Polling" },
 ];
 
 const Home = () => {
