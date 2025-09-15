@@ -17,7 +17,6 @@ const Nested: React.FC = () => {
         selected.push(...getSelectedItems(item.children));
       }
     });
-    console.log(selected);
     return selected;
   };
 

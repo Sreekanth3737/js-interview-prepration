@@ -7,6 +7,7 @@ const ROUTES = [
   { link: "/infinite-scroll", title: "Infinite Scroll" },
   { link: "/nested-checkbox", title: "nested checkbox" },
   { link: "grid-colorizer", title: "GRID Colorizer" },
+  { link: "checkbox-tree", title: "Checkbox Tree" },
 ];
 
 const Home = () => {
