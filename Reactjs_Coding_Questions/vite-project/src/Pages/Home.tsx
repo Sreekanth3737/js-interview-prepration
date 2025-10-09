@@ -9,6 +9,7 @@ const ROUTES = [
   { link: "grid-colorizer", title: "GRID Colorizer" },
   { link: "checkbox-tree", title: "Checkbox Tree" },
   { link: "long-polling", title: "Long Polling" },
+  { link: "notes-component", title: "notes-component" },
 ];
 
 const Home = () => {

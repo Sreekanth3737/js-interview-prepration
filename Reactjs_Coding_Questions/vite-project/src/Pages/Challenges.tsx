@@ -7,6 +7,7 @@ import Nested from "../Challenges/nested-checkbox/App";
 import Grid from "../Challenges/Grid-colorizer/grid";
 import CheckBoxTree from "../Challenges/CheckboxTree/CheckBoxTree";
 import LongPoolingComponent from "../Challenges/long-polling/App";
+import NotesApp from "../Challenges/NotesComponent/NotesApp";
 
 const reactChallengesMap: Record<string, ComponentType> = {
   "grid-lights": GridLights,
@@ -16,6 +17,7 @@ const reactChallengesMap: Record<string, ComponentType> = {
   "grid-colorizer": Grid,
   "checkbox-tree": CheckBoxTree,
   "long-polling": LongPoolingComponent,
+  "notes-component": NotesApp,
 };
 
 const Challenges = () => {
